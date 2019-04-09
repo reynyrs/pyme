@@ -1,0 +1,46 @@
+@media (min-width:991px){
+    .menuscrollnav{
+        display: none;
+    }
+
+}
+@media (max-width: 319px){
+    .cuadrosred{
+        font-size: 10vw;
+        padding: 5px 7vw;
+    }
+  
+
+}
+@media (max-width: 768px){
+    .btnsend{
+        padding: 22px;
+        position: relative;
+        text-align: center;
+        left: 50%;
+        width: 60%;
+        transform: translateX(-50%);
+    }
+  
+
+}
+@media (max-width: 320px){
+  
+    .iconoisend{
+        font-size: 1em !important;
+    }
+
+}
+@media (max-width: 600px){
+  
+    .sombrarow{
+       width: 90% !important;
+    }
+    .letrafoot{
+        padding: 1em;
+        width: 100%;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+}
