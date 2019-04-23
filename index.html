@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="css/rey.css">
+    <link rel="stylesheet" type="text/css" href="css/toaster.min.css">
     <link rel="stylesheet" href="css/mediarey.css">
     <link rel="stylesheet" href="css/nivo-lightbox.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
@@ -31,10 +32,10 @@
                       </div>
                     <!-- fondo del menu -->
                       <!-- logo del menu -->
-                      <img class="circle" src="imagenes/braseiro/logobraseiroins.jpg">
+                      <img class="circle logoside" src="imagenes/braseiro/logobraseiroins.jpg">
                       <!-- logo del menu -->
-                      <a href="#!name"><span class="white-text name">Codework Venezuela</span></a>
-                      <a href="#!email"><span class="white-text email">info@codeworkvenezuela.com</span></a>
+                      <a href="#!name"><span class="white-text name">Braseiro Steak House</span></a>
+                      <a href="#!email"><span class="white-text email">&nbsp</span></a>
                     </div></li>
 
                      <li><a href="#!"><i class="fas fa-phone"></i>04126517323</a></li>
@@ -126,7 +127,7 @@
             </div>
       </section> -->
     <!-- menu  -->
-      <section class="padseccuadro row" style="padding-top:0;margin-bottom:0">
+      <section class="padseccuadro row bordeprime" style="padding-top:0;margin-bottom:0">
           <div class="col s12">
                 <div class="row center" style="margin-bottom:0">
                   <div class="box-icon ">
@@ -148,21 +149,21 @@
 <div class="row">
   <ul class="collapsible margincollapzero">
                 
-    <li class="col l4 col s12">
+    <li class="col l9 col s12">
       <div class="collapsible-header">
         
         Familia Braseiro
         <span class="badge"></span></div>
       <div class="collapsible-body white"><p>Lorem ipsum dolor sit amet.</p></div>
     </li>
-    <li class="col l4 col s12">
+    <li class="col l9 col s12">
         <div class="collapsible-header">
           
           Nuestro Menú
           <span class="badge"></span></div>
         <div class="collapsible-body white"><p>Lorem ipsum dolor sit amet.</p></div>
       </li>
-      <li class="col l4 col s12">
+      <li class="col l9 col s12">
           <div class="collapsible-header">
             
             Horario
@@ -297,35 +298,42 @@
     <!-- /galeria -->
   <!--  -->
   <section class="padseccuadro paddingcorre ">
- 
-    <div class="parallax paddingcorre">
+      <div  ng-app="furniture">
+    <div class="parallax paddingcorre" ng-controller="mail"  ng-submit="SubmitEmail()" >
+      
         <div class="opacidadneg row">
           <div class="col s12 centerform">
               <div class="row center">
-                <div class="input-field col s10 inputsusb colorinputlett">
+              		<form name="emailform">
+                <div class="input-field col s10 inputsusb colorinputlett contact-forms">
                 
-                  <input id="icon_prefix " type="text" class="validate">
-                  <label for="icon_prefix">Ingresa tu correo</label>
+                    <input type="email" ng-model="email.mail" required class="form-control white-text" id="email">
+                  <label ng-model="email.mail" required class="form-control" id="email" for="icon_prefix">Ingresa tu correo</label>
                 </div>
-                
+                 
               </div>
               <div style="position:relative">
-                  <button class="btn waves-effect waves-light btnsend" type="submit" name="action">
+                  <button class="btn waves-effect sent-butnn waves-light btnsend" ng-disabled="emailform.$invalid" type="submit" value="SUBMIT">
                      
                       <i ></i><i class=" iconoisend"> <span class="material-icons prefix iconosuscri">local_post_office</span> Suscribete</i>
                     </button>
+                  </form>
               </div>
             
           </div>
         </div>
       </div>
+      <toaster-container toaster-options="{'time-out': 2000,'limit':1, 'showCloseButton':true}" style="z-index: 0;"></toaster-container>
+    </div>
     
   </section>
-        <!-- menu redes soc  -->
+    <!-- menu redes soc  -->
     <!-- instagram api -->
-    <div class="container" id="instagramapi" style="padding-top:6%">
-     <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/fc22ad4102e7574094044cc1f18c4ca1.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-   </div>
+   <div class="backinsta opacidadneg">
+      <div class="container" id="instagramapi" style="padding-top:6%">
+      <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/fc22ad4102e7574094044cc1f18c4ca1.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    </div>
+  </div>
    <!-- /instagram api -->
     <section class="padseccuadro redessocpadd row">
         <div class="col s12">
@@ -382,9 +390,17 @@
        
 
     <!--JavaScript at end of body for optimized loading-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/toaster.min.js"></script>
+  <script src="angular-scripts/main.js"></script>
+  <script src="angular-scripts/controllers.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script>  document.addEventListener('DOMContentLoaded', function() {
+   
+   
+   <script>  document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems, options);
             $('.button-collapse').sideNav('hide');
@@ -432,6 +448,8 @@
                     document.getElementById("demo").innerHTML = d.getFullYear();
                     </script>
                     <script src="js/rey.js"></script>
+                    
+                   
 
   </body>
 </html>

@@ -32,6 +32,7 @@
 
 }
 @media (max-width: 600px){
+    
   
     .sombrarow{
        width: 90% !important;
@@ -41,6 +42,32 @@
         width: 100%;
         letter-spacing: 1px;
         font-size: 12px;
+    }
+
+}
+
+@media  only screen and  (max-width: 425px) and (min-width:376px){
+    
+    :root{
+     
+        --tambanner: 250px !important;
+        --logotama: 50%;
+    }
+
+}
+@media  only screen and  (max-width: 375px){
+    
+    :root{
+     
+        --tambanner: 200px;
+        --logotama: 50%;
+    }
+
+}
+@media only screen and  (max-width: 768px) and (min-width: 425px){
+    :root{
+     
+        --tambanner: 300px;
     }
 
 }

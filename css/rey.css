@@ -1,13 +1,12 @@
 /* variable de colores */
-
+/* made By Reyny */
 :root{
     --marron:#5e3813;
     --naranja:#ffa726;
     --barrasnav:#f9ead3;
+    --tambanner: 400px;
+    --logotama: 70%;
 }
-
-
-
 /* /variable de colores  */
 html {
     scroll-behavior: smooth;
@@ -45,7 +44,7 @@ html {
 }
 .bannerlogo{
     background-image: url('../imagenes/braseiro/hamburcora.JPG');
-    height: 200px;
+    height: var(--tambanner);
     max-width: 100%;
     background-size: cover;
     position: relative;
@@ -58,8 +57,11 @@ html {
     object-fit: cover;
 }
 .logotam{
-    width: 70px;
+    width: var(--logotama);
     border-radius:50%;
+    border: 2px solid var(--marron);
+}
+.logoside{
     border: 2px solid var(--marron);
 }
 .menuscrollnav{
@@ -111,6 +113,12 @@ html {
 .padseccuadro{
     padding-top: 20px;
     position: relative;
+  
+}
+.bordeprime{
+    border-bottom:1px solid #ddd;
+    padding-bottom: 1%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 .cuadrosred:hover{
     color: gray;
@@ -193,6 +201,10 @@ position: relative;
     right: 3px;
     top: 3px;
 }
+.backinsta{
+    background-image: url("../imagenes/braseiro/fondoinsta.JPG");
+    position: relative;
+}
 .botoncerrarmenu{
     font-size: 20px;
     position: absolute;
@@ -259,6 +271,13 @@ color: var(--naranja);
   }
   .margincollapzero{
       margin-top: 0;
+      position: relative;
+      border-top: none;
+  }
+  ul.collapsible.margincollapzero > li.col.l9.col.s12{
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
   }
   .flechacerrarmenu{
     position: relative;
