@@ -204,6 +204,7 @@ position: relative;
 .backinsta{
     background-image: url("../imagenes/braseiro/fondoinsta.JPG");
     position: relative;
+    background-size:cover;
 }
 .botoncerrarmenu{
     font-size: 20px;
